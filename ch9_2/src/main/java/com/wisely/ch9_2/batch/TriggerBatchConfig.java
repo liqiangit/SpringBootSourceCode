@@ -78,6 +78,7 @@ public class TriggerBatchConfig {
 		jobRepositoryFactoryBean.setDataSource(dataSource);
 		jobRepositoryFactoryBean.setTransactionManager(transactionManager);
 		jobRepositoryFactoryBean.setDatabaseType("oracle");
+        jobRepositoryFactoryBean.setIsolationLevelForCreate("ISOLATION_READ_COMMITTED");  
 		return jobRepositoryFactoryBean.getObject();
 	}
 

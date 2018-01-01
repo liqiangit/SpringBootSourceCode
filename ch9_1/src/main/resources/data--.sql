@@ -1,3 +1,25 @@
+
+CREATE TABLE SYS_USER
+(
+    ID NUMBER(19) NOT NULL,
+    USERNAME NVARCHAR2(100),
+    PASSWORD NVARCHAR2(100),
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE SYS_ROLE
+(
+    ID NUMBER(19) NOT NULL,
+    NAME NVARCHAR2(100),
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE SYS_USER_ROLES
+(
+    SYS_USER_ID NUMBER(19) NOT NULL,
+    ROLES_ID NUMBER(19) NOT NULL
+);
+
 insert into SYS_USER (id,username, password) values (1,'wyf', 'wyf');
 insert into SYS_USER (id,username, password) values (2,'wisely', 'wisely');
 

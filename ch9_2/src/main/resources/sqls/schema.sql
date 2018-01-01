@@ -1,0 +1,30 @@
+
+create table PERSON
+(
+  id          NUMBER not null primary key,
+  name        VARCHAR2(20),
+  age         NUMBER,
+  nation      VARCHAR2(20),
+  address     VARCHAR2(20)
+);
+
+CREATE TABLE SYS_USER
+(
+    ID NUMBER(19) NOT NULL,
+    USERNAME NVARCHAR2(100),
+    PASSWORD NVARCHAR2(100),
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE SYS_ROLE
+(
+    ID NUMBER(19) NOT NULL,
+    NAME NVARCHAR2(100),
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE SYS_USER_ROLES
+(
+    SYS_USER_ID NUMBER(19) NOT NULL,
+    ROLES_ID NUMBER(19) NOT NULL
+);
